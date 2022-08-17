@@ -54,3 +54,9 @@ const Postagem = sequelize.define('postagens', {
 //   login: "jonascouto",
 //   senha: '12345'
 // });
+
+
+module.exports={
+  Sequelize: Sequelize,
+  sequelize: sequelize
+}
