@@ -1,7 +1,7 @@
 const db = require('./db')
 
 
-const Post = db.sequelize.define('postagens', {
+const Post = db.sequelize.define('posts', {
     titulo:{
       type: db.Sequelize.STRING
     },
@@ -12,4 +12,4 @@ const Post = db.sequelize.define('postagens', {
 
 // Post.sync({ force: true });
 
-module.exports = Post
+module.exports = Post;
