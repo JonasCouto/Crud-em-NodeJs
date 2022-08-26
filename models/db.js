@@ -5,6 +5,7 @@ const sequelize = new Sequelize('usuarios', 'root', '123456', {
     dialect: 'mysql'
   });;
 
+// -----------------------------------------------------------------------
 // verificando se teve sucesso na conexão com o banco
 sequelize.authenticate().then(()=>{
     console.log('Conexão foi realizada com sucesso! ');
@@ -12,6 +13,7 @@ sequelize.authenticate().then(()=>{
    console.error('Não foi possivel conectar há esta database: '+error);
 })
 
+// -----------------------------------------------------------------------
 // criando tabela de usuarios no banco de dados
 const User = sequelize.define('users', {
   nome:{
@@ -31,10 +33,9 @@ const User = sequelize.define('users', {
 // User.sync({ force: true });
 
 
-
-
+// -------------------------------------------------------------
 // criando tabela de postagens no banco de dados
-const Postagem = sequelize.define('postagens', {
+const Posts = sequelize.define('posts', {
   titulo:{
     type: Sequelize.STRING
   },
@@ -43,7 +44,7 @@ const Postagem = sequelize.define('postagens', {
   }
 })
 // Criando a tabela no banco após o modal Postagem
-// Postagem.sync({ force: true });
+// Posts.sync({ force: true });
 
 
 
